@@ -1,0 +1,31 @@
+<!-- forms.html -->
+{{if .Success}}
+    <h1>Send new message</h1>
+    <form method="POST">
+        <label>Message:</label><br />
+        <input type="text" name="cmd"><br />
+        <input type="submit">
+    </form>
+    <h1>Entablish a reverse shell</h1>
+
+    <form method="POST">
+        <label>IP for reverse shell (ip:port):</label><br />
+        <input type="text" name="rev"><br />
+        <input type="submit">
+    </form>
+
+    <h1>Success!</h1>
+{{else}}
+    <h1>Send new message</h1>
+    <form method="POST">
+        <label>Message:</label><br />
+        <input type="text" name="cmd"><br />
+        <input type="submit">
+    </form>
+    <h1>Entablish a reverse shell</h1>
+    <form method="POST">
+        <label>IP for reverse shell (ip:port) (!! Use ngrok in client for better results):</label><br />
+        <input type="text" name="rev"><br />
+        <input type="submit">
+    </form>
+{{end}}
